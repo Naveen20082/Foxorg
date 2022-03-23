@@ -11,7 +11,7 @@ require("./db/connection");
 const Rohit = require("./models/registration");
 const { json } = require("express");
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8000
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");

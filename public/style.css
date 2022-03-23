@@ -145,13 +145,13 @@ nav ul li active{
     font-family: 'Roboto', sans-serif;
   }
   .wave {
-    opacity: .8;
+    opacity: .6;
     position: absolute;
     top: 75%;
     left: 50%;
     width: 3000px;
     height: 3000px;
-    background: #fff;
+    background: lightgray;
     margin-left: -1500px;
     transform-origin: 50% 48%;
     border-radius: 46%;

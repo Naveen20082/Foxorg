@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false").then(()=>{
+mongoose.connect("mongodb+srv://lucky:Lucky8063@cluster0.kkipx.mongodb.net/movieweb?retryWrites=true&w=majority").then(()=>{
     console.log("connect ");
 }).catch((e)=>{
     console.log(e);
-})
+}) 
