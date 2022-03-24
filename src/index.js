@@ -40,7 +40,7 @@ app.get("/login", (req , res)=>{
 
 app.get("/list", auth , (req , res)=>{
     console.log(`cookie value ${req.cookies.user}`)
-    res.render("list");
+    res.render("list"); 
 });
 
 app.get("/logout", auth , async(req , res) =>{
