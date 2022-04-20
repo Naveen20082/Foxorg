@@ -1,155 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoviesByLuck</title>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoxORG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat Alternates" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Mainpage.css" />
+    <link rel="stylesheet" href="css/Navbar.css" />
+    <link rel="stylesheet" href="css/Sign_up.css" />
+    <link rel="stylesheet" href="css/sign-in.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        .height_anim {
+            animation: height_anim 2s;
+        }
+        
+        @keyframes height_anim {
+            0% {
+                height: 0%;
+            }
+            100% {
+                height: fit-content;
+            }
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .nav_ser>ul {
+            overflow: hidden;
+            transition: height 2s ease 0s;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        .Nav_main {
+            position: absolute;
+            display: flex;
+            /* background-color: #9d9a9a; */
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            height: 20rem;
+            width: 100vw;
+            z-index: 11;
+        }
+        
+        .Nav_main>.logo {
+            position: relative;
+            left: -16%;
+        }
+        
+        .Nav_main>ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+            height: 100%;
+        }
+        
+        .Nav_main>ul>li {
+            height: 100%;
+            text-align: center;
+            align-items: center;
+            display: flex;
+        }
+        
+        .ul_Uline {
+            border-bottom: 4px solid;
+        }
+        
+        .Nav_main>ul>li>a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+        
+        .Nav_SS {
+            font-size: 2rem;
+            position: relative;
+            left: 7%;
+        }
+        
+        .Nav_main>div>button {
+            font-size: 2.4rem;
+        }
+        
+        .Nav_main>div>span {
+            font-size: 2.5rem;
+            cursor: default;
+        }
+    </style>
+    <style>
+        @media (min-width: 1500px) {
+            html {
+                font-size: 52%;
+            }
+            .vid {
+                width: 78rem;
+            }
+            .contentpg2 {
+                justify-content: flex-start;
+                top: 13%;
+                height: fit-content;
+            }
+        }
+        
+        @media (min-width: 1200px) and (max-width: 1499px) {
+            html {
+                font-size: 42%;
+            }
+            .bod {
+                height: 116rem;
+            }
+            .vid {
+                width: 88rem;
+                margin-left: 11rem;
+            }
+            .pg2 {
+                height: fit-content;
+                margin-bottom: 15rem;
+            }
+            .contentpg2 {
+                justify-content: center;
+            }
+            .about>p {
+                font-size: 3rem;
+                padding-top: 2rem;
+            }
+            .icons {
+                font-size: 2.5rem;
+            }
+            .add>p {
+                font-size: 3rem;
+            }
+            .text-color>a {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (min-width: 1000px) and (max-width: 1199px) {
+            html {
+                font-size: 32%;
+            }
+            .bod {
+                height: 105rem;
+            }
+            .vid {
+                width: 104rem;
+                margin-left: 1rem;
+            }
+            .pg2 {
+                height: fit-content;
+                margin-top: 15rem;
+                margin-bottom: 15rem;
+            }
+            .contentpg2 {
+                justify-content: center;
+            }
+            .about>p {
+                font-size: 3.5rem;
+                padding-top: 2rem;
+            }
+            .icons {
+                font-size: 3.5rem;
+            }
+            .add>p {
+                font-size: 3.5rem;
+            }
+            .text-color>a {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (min-width: 800px) and (max-width: 999px) {
+            html {
+                font-size: 32%;
+            }
+            .bod {
+                height: 105rem;
+            }
+            .vid {
+                width: 92rem;
+                margin-left: -6rem;
+            }
+            .footer {
+                gap: 5rem;
+            }
+            .about>p {
+                font-size: 3.5rem;
+                padding-top: 2rem;
+            }
+            .icons {
+                font-size: 3.5rem;
+            }
+            .add>p {
+                font-size: 3.5rem;
+            }
+            .text-color>a {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (min-width: 500px) and (max-width: 799px) {
+            html {
+                font-size: 25%;
+            }
+            .box>h1 {
+                font-size: 5rem;
+            }
+            .bod {
+                height: 105rem;
+            }
+            .vid {
+                width: 90rem;
+                margin-left: -14rem;
+            }
+            .heading {
+                font-size: 5rem;
+            }
+            .moto>p {
+                font-size: 3rem;
+            }
+            .img1>img {
+                width: 85rem;
+                height: 65rem;
+            }
+            .pg-3 {
+                margin-top: 23rem;
+            }
+            .footer {
+                gap: 2rem;
+            }
+            .about>p {
+                font-size: 3.5rem;
+                padding-top: 2rem;
+            }
+            .icons {
+                font-size: 3.5rem;
+            }
+            .add>p {
+                font-size: 3.5rem;
+            }
+            .text-color>a {
+                font-size: 3rem;
+            }
+        }
+        
+        .logo>img {
+            max-width: 20rem;
+        }
+        
+        .nav_ser>ul {
+            align-items: flex-start;
+            align-content: center;
+            justify-content: center;
+            padding-left: 4rem;
+        }
+    </style>
 </head>
+
 <body>
-    <nav>
-        <div class="logo">
-           <a href="/"><p>movies by luck</p></a></div>
-            <ul>
-                <li><a href="/signup">Create New Account</a></li>
-                <li><a href="/login" class="active">Signin</a></li>
-                <li><a href="/list">secret</a></li>
-                
-            </ul>
-        </nav>
+    <header class="Nav_main">
+        <div class="logo"><img src="./Images/Mainpage Images/images/logo.png" alt="FoxORG" srcset="" /></div>
 
-    <div class='scards'>
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/No Way Home (2021).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download Spider-Man: No Way Home (2021) </h3>
-                    <a href="https://themoviesverse.co/download-spider-man-no-way-home-2021-hindi-english-bluray-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+        <div class="Nav_SS">
+            <button class="nav_signin">Sign-in</button>
+            <button class="nav_signup">Sign-up</button>
+        </div>
+    </header>
+    <!-- ////////////////////////////////////////////////////{Navbar}///////////////////////// -->
+    {{> navbar }}
+    <!-- ///////////////////////////////// { MAin Page }//////////////////////////////////////// -->
+    <!-- <div class="lg ">
+        <img src="./Images/Mainpage Images/images/Name logo.png " alt=" " srcset=" " />
+    </div> -->
+    <section class="home">
+        <section class="back">
+            <div class="bod">
+                <div class="logo">
+                    <video class="vid" autoplay infinite loop muted src="./Videos/Mainpage/New video.mp4 " alt="Videos "></video>
+                    <div class="mute_btn" style="width: 100%; height: 100%">
+                        <button title="Mute " class="mute"></button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h1>Simply Creators</h1>
+                    <div class="vision">Research, Reinovate, Reinvent to solve harmful planetory problems effectively and stably.</div>
                 </div>
             </div>
-        </div>
-
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/The Adam Project.jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                       Download The Adam Project (2022) </h3>
-                    <a href="https://themoviesverse.co/download-the-adam-project-2022-hindi-english-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+        </section>
+        <section class="pg2">
+            <div class="contentpg2">
+                <h1 id="Dmag_heading" data-aos="fade-up-left " data-aos-duration="1000 " data-aos-once="true " class="heading vanish1 fade-in">Presenting D-mag</h1>
+                <!-- class="l1 vanish1 fade-in " -->
+                <div class="moto">
+                    <p l1 data-aos="fade-left" data-aos-delay="2500" data-aos-duration="1000" data-aos-once="true">To give you an idea and vision</p>
+                    <p l2 data-aos="fade-left" data-aos-delay="2600" data-aos-duration="1000" data-aos-once="true">of what has been like at the FoxORG,</p>
+                    <p l3 data-aos="fade-left" data-aos-delay="2700" data-aos-duration="1000" data-aos-once="true">There are some galleries that feature ,</p>
+                    <p l4 data-aos="fade-left" data-aos-delay="2800" data-aos-duration="1000" data-aos-once="true">present profile of the company and offering</p>
+                    <p l5 data-aos="fade-left" data-aos-delay="2900" data-aos-duration="1000" data-aos-once="true">coverage-related topics such as products ,</p>
+                    <p l6 data-aos="fade-left" data-aos-delay="3000" data-aos-duration="1000" data-aos-once="true">works and services.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/venom 2.jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download Venom: Let There Be Carnage (2021) </h3>
-                    <a href="https://themoviesverse.co/download-venom-let-there-be-carnage-2021-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+            <div class="box">
+                <div id="Dmag_img" class="img1 fade-lf vanish2" style="opacity: 0">
+                    <img src="./Images/Mainpage Images/images/Final_dmag.png " alt=" " srcset="" />
+                    <div class="shadow"></div>
                 </div>
             </div>
-        </div>
-
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/Download Spider-Man 3 (2007).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download Spider-Man 3 (2007) </h3>
-                    <a href="https://themoviesverse.co/download-spider-man-3-2007-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+        </section>
+        <div class="ba">
+            <section class="pg-3">
+                <div class="about">
+                    <h1>About</h1>
+                    <br />
+                    <p>
+                        We don't have anything to say about us yet but we are creating our story. Soon we will come up with a good story of our journey to tell you but we do have amission to restore nature at its capabilities and help every living organism of The Mother Earth
+                        to live in good enviroment.
+                    </p>
                 </div>
-            </div>
-        </div>
+                <hr />
 
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image//Download Spider-Man 2.jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download Spider-Man 2 </h3>
-                    <a href="https://themoviesverse.co/download-spider-man-2-2004-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+                <div class="content">
+                    <h1>Content</h1>
+                    <div class="icons">
+                        <div class="mal img"><img src="./Images/Mainpage Images/icons/gmail.png " alt=" " /><a href="# ">foxorg.Inc@gmail.com</a></div>
+                        <div class="fb img"><img src="./Images/Mainpage Images/icons/facebook.png " alt=" " /><a href="# ">foxORG INC.</a></div>
+                        <div class="ut img"><img src="./Images/Mainpage Images/icons/youtube.png " alt=" " /><a href="https://www.youtube.com/ ">foxORG yt</a></div>
+                        <div class="img"><img src="./Images/Mainpage Images/icons/github.png " alt=" " /><a href="# ">altos axis</a></div>
+                        <div class="img"><img src="./Images/Mainpage Images/icons/linkedin.png " alt=" " /><a href="# ">foxORG INC.</a></div>
+                        <div class="img"><img src="./Images/Mainpage Images/icons/instagram.png " alt=" " /><a href="# ">foxinsta</a></div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <hr />
 
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/Download Spider-Man (2002).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download Spider-Man (2002) </h3>
-                    <a href="https://themoviesverse.co/download-spider-man-2002-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+                <div class="add">
+                    <h1>Address</h1>
+                    <br />
+                    <p>Planet Earth, The Solar System, Orion Arm, The Milky Way, Local Group, Virgo Cluster, Virgo Super-Cluster,Semi-major axle 149,597 887.5Km 1,000,000 1124UA, Universe ..... One.</p>
                 </div>
-            </div>
-        </div>
 
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/Download The Amazing Spider-Man 2 (2014).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download The Amazing Spider-Man 2 (2014) </h3>
-                    <a href="https://themoviesverse.co/download-the-amazing-spider-man-2-2014-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
-                </div>
-            </div>
-        </div>
+                <div class="ico">
+                    <div class="footer">
+                        <img src="./Images/Mainpage Images/images/logoii.jpeg " alt=" " srcset="" />
+                        <div class="acc text-color">
+                            <h1>Account</h1>
+                            <a href="# ">FoxORG</a>
+                            <a href="# ">Central World</a>
+                            <a href="# ">Eduverse</a>
+                            <a href="# ">FLC</a>
+                            <a href="# ">App</a>
+                        </div>
+                        <div class="career text-color">
+                            <h1>Career</h1>
+                            <a href="# ">Work </a>
+                            <a href="# ">Intern </a>
+                            <a href="# ">Research </a>
+                        </div>
+                        <div class="eco text-color">
+                            <h1>Ecosystem</h1>
+                            <a href="# ">SiteMap</a>
+                            <a href="# ">Feedback</a>
+                            <a href="# ">Support</a>
+                        </div>
+                        <div class="learn text-color">
+                            <h1>Learning club</h1>
+                            <a href="# ">About</a>
+                            <a href="# ">Access</a>
+                            <a href="# ">Courses</a>
+                        </div>
+                        <div class="prod text-color">
+                            <h1>Product</h1>
+                            <a href="# ">Software</a>
+                            <a href="# ">Hardware</a>
 
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/Download The Amazing Spider-Man (2012).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download The Amazing Spider-Man (2012) </h3>
-                    <a href="https://themoviesverse.co/download-the-amazing-spider-man-2012-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
+                            <!-- <a href="# ">D-Mag ©</a>
+                            <a href="# ">DBK ©</a>
+                            <a href="# ">Eduverse ©</a> -->
+                        </div>
+                        <div class="service text-color">
+                            <h1>Service</h1>
+                            <a href="# ">Advance</a>
+                            <a href="# ">Education</a>
+                            <a href="# ">Developer</a>
+                            <a href="# ">Security & Privacy</a>
+                            <a href="# ">Technology</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
+    </section>
+    <script src="./js/Mainpage.js"></script>
+    <!-- //////////////same js files//////////////////// -->
+    <script src="./js/jquery_min.js"></script>
+    <script src="./js/SI_SU.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/Navbar.js"></script>
+    <script>
+        AOS.init();
+        let screenLog = document.querySelector("#screen-log");
+        // document.addEventListener("scroll", logKey);
 
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/Download SpiderMan- Far from Home (2019).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download SpiderMan- Far from Home (2019) </h3>
-                    <a href="https://themoviesverse.co/download-spider-man-far-from-home-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
-                </div>
-            </div>
-        </div>
-
-        <div class="cards">
-            <div className="card">
-                <img src="./movie image/Download SpiderMan- Homecoming (2017).jpg" alt="myPic" className="card__img" />
-                <div class="card__info">
-                    <h3 class="card__tittle">
-                        Download SpiderMan- Homecoming (2017) </h3>
-                    <a href="https://themoviesverse.co/download-spider-man-homecoming-2017-hindi-480p-720p-1080p/" target="_blank">
-                        <button> Watch Now</button>
-                    </a>    
-                </div>
-            </div>
-        </div>
-    </div>
+        // function logKey(e) {
+        //     console.log(e.pageX);
+        // }
+        document.addEventListener("onscroll", (e) => {
+            console.log(e.pageX);
+        });
+    </script>
 </body>
+
 </html>

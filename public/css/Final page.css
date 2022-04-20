@@ -1,0 +1,477 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.menubar {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    display: none;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.mb-box {
+    width: 80vw;
+    height: 36vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1em;
+    justify-content: space-around;
+    color: #595959;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #505050;
+}
+
+.mb-sec1 {
+    display: flex;
+    column-gap: 1em;
+    text-align: center;
+    align-self: center;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+.mb-service {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mb-career {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mb-products {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mb-sec2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    width: 20%;
+    text-align: center;
+}
+
+.mb-MA {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.mb-AC {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.mb-sec3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    text-align: center;
+}
+
+.mb-sec3>button>h1 {
+    text-decoration: none;
+    color: silver;
+    font-weight: bolder;
+    font-family: "Montserrat Alternates";
+}
+
+.menubar .mb-box button {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: White;
+    font-size: medium;
+}
+
+.menubar .mb-box button:hover {
+    border-bottom: black;
+    text-decoration: underline;
+    color: rgb(233, 217, 217);
+}
+
+.menubar .mb-box button a {
+    color: White;
+    text-decoration: none;
+}
+
+.menubar .mb-box button a:hover {
+    text-decoration: underline;
+    color: rgb(233, 217, 217);
+}
+
+.menubar .mb-box .mb-sec2 h1 {
+    align-self: center;
+    text-decoration: underline;
+    margin-bottom: 1em;
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+    cursor: default;
+    color: White;
+}
+
+.menubar .mb-box .mb-sec1 h1 {
+    font-family: "Montserrat Alternates";
+    color: White;
+}
+
+.menubar h1 {
+    /* margin-bottom: 10px; */
+    text-decoration: underline;
+    cursor: default;
+    color: White;
+}
+
+.menubar .linee {
+    border: 1px solid White;
+    align-self: center;
+    height: 50%;
+    background-color: White;
+}
+
+.mb-buttons {
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    position: fixed;
+    margin: 2vw;
+    right: 1px;
+    width: 3vw;
+    height: 3vw;
+    /* background: linear-gradient( -64deg, black, transparent); */
+    margin-top: 5vw;
+    margin-right: 5vw;
+    /* border: 2px dashed blue; */
+    z-index: 101;
+}
+
+.menu2 {
+    position: fixed;
+    margin: 2vw;
+    right: 1px;
+    width: 3vw;
+    height: 3vw;
+    /* background: linear-gradient( -64deg, black, transparent); */
+    margin-top: 5vw;
+    margin-right: 5vw;
+    /* border: 2px dashed blue; */
+    z-index: 100;
+    display: none;
+}
+
+.menu>ul {
+    display: grid;
+    gap: 2px;
+    position: fixed;
+    align-items: center;
+    justify-items: center;
+}
+
+.menu2>ul {
+    display: grid;
+    gap: 2px;
+    position: fixed;
+    align-items: center;
+    justify-items: center;
+}
+
+.line {
+    border: 2px solid black;
+    background-color: black;
+    width: 56%;
+    height: 0px;
+    list-style: none;
+}
+
+.line2 {
+    border: 2px solid black;
+    background-color: black;
+    width: 56%;
+    height: 0px;
+    list-style: none;
+}
+
+.line:nth-child(1) {
+    position: absolute;
+    top: 0.35em;
+}
+
+.line:nth-child(2) {
+    position: absolute;
+    transition: 0.4s ease;
+}
+
+.line:nth-child(3) {
+    position: absolute;
+    top: 0.7em;
+    transition: 0.4s ease;
+}
+
+.menu2 .line:nth-child(1) {
+    transform: rotateZ(-45deg);
+    top: 0.5vw;
+}
+
+.menu2 .line:nth-child(2) {
+    transform: rotateZ(45deg);
+}
+
+.menu:hover {
+    transition: 1s ease-in;
+    cursor: pointer;
+    animation: menu 2s ease-in-out infinite;
+}
+
+.menu2:hover {
+    transition: 1s ease-in;
+    cursor: pointer;
+    animation: menu 2s ease-in-out infinite;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.nav>li {
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: White;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.nav>li>a {
+    color: White;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav>li:hover {
+    border-bottom: black;
+    text-decoration: underline;
+    color: rgb(233, 217, 217);
+}
+
+.nav>li>a:hover {
+    border-bottom: black;
+    text-decoration: underline;
+    color: rgb(233, 217, 217);
+}
+
+.dropdown>a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-item>a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4em;
+    backdrop-filter: opacity(0.5);
+}
+
+.dropdown-item>a:hover {
+    text-decoration: underline;
+    color: rgb(233, 217, 217);
+}
+
+.dropdown-item {
+    display: none;
+    flex-direction: column;
+    width: 7em;
+    position: absolute;
+    background-color: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 10%;
+    /* bottom: 18%;
+    left: 25%; */
+}
+
+.dropdown-item:hover {
+    display: block;
+}
+
+.dropdown:hover .dropdown-item {
+    display: block;
+}
+
+.di-sh {
+    left: 24%;
+    bottom: 13%;
+}
+
+.di-security {
+    left: 23%;
+    bottom: 44%;
+}
+
+.di-tech {
+    top: 31%;
+    left: 22%;
+}
+
+.dropdown-item>p {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    clip-path: polygon(0 31%, 0 57%, 21% 42%);
+    position: absolute;
+    left: 5px;
+    /* bottom: 34%; */
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.tp-background {
+    background-color: #e2e2e2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -99;
+}
+
+.tp-background::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #c2c2c2;
+}
+
+.tp-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 35vh;
+    gap: 4vh;
+}
+
+.tp-header>p {
+    line-height: 1.35em;
+    font-size: 40px;
+    cursor: default;
+    font-family: "Montserrat Alternates";
+}
+
+.tp-header>p>span {
+    font-weight: bolder;
+    font-family: "Montserrat Alternates";
+}
+
+.tp-header>div {
+    font-family: "Montserrat Alternates";
+}
+
+.tp-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 2%;
+    gap: 4em;
+}
+
+.tp-members>div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.tp-image {
+    width: 13rem;
+    height: 13rem;
+    position: relative;
+    background-image: url(Rajat.jpeg);
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tp-image>img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tp-image>img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.tp-members>div>img {
+    width: calc(9vw + 9vh);
+    border-radius: 50%;
+}
+
+.tp-members>div>p {
+    line-height: 1.41em;
+    font-size: 22px;
+    font-family: "Montserrat Alternates";
+    cursor: pointer;
+}
+
+.team-members>div>div {
+    line-height: 1.75em;
+    font-size: 18px;
+    font-family: "Montserrat Alternates";
+    cursor: pointer;
+}
+
+.member1>span {
+    font-family: "Montserrat Alternates";
+    cursor: pointer;
+}
+
+footer {
+    height: 22vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 5vh;
+}

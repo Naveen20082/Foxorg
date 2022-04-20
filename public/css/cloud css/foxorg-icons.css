@@ -1,0 +1,476 @@
+@font-face {
+    font-family: 'foxorgIcons';
+    src:  url('foxorg-icons.eot?spat4u');
+    src:  url('foxorg-icons.eot?spat4u#iefix') format('embedded-opentype'),
+      url('foxorg-icons.ttf?spat4u') format('truetype'),
+      url('foxorg-icons.woff?spat4u') format('woff'),
+      url('foxorg-icons.svg?spat4u#foxorgIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="fxri-"], [class*=" fxri-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: foxorgIcons !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .fxri-add-submenu:before {
+    content: "\e900";
+  }
+  .fxri-alert:before {
+    content: "\e901";
+  }
+  .fxri-align-center:before {
+    content: "\e902";
+  }
+  .fxri-align-justify:before {
+    content: "\e903";
+  }
+  .fxri-align-left:before {
+    content: "\e904";
+  }
+  .fxri-align-right:before {
+    content: "\e905";
+  }
+  .fxri-android:before {
+    content: "\e906";
+  }
+  .fxri-apple:before {
+    content: "\e907";
+  }
+  .fxri-arrow-down:before {
+    content: "\e908";
+  }
+  .fxri-arrow-next:before {
+    content: "\e909";
+  }
+  .fxri-arrow-prev:before {
+    content: "\e90a";
+  }
+  .fxri-arrow-up:before {
+    content: "\e90b";
+  }
+  .fxri-bold:before {
+    content: "\e90c";
+  }
+  .fxri-bookmark:before {
+    content: "\e90d";
+  }
+  .fxri-bootstrap:before {
+    content: "\e90e";
+  }
+  .fxri-briefcase:before {
+    content: "\e90f";
+  }
+  .fxri-browse:before {
+    content: "\e910";
+  }
+  .fxri-bulleted-list:before {
+    content: "\e911";
+  }
+  .fxri-calendar:before {
+    content: "\e912";
+  }
+  .fxri-camera:before {
+    content: "\e913";
+  }
+  .fxri-cart-add:before {
+    content: "\e914";
+  }
+  .fxri-cart-full:before {
+    content: "\e915";
+  }
+  .fxri-cash:before {
+    content: "\e916";
+  }
+  .fxri-change-style:before {
+    content: "\e917";
+  }
+  .fxri-chat:before {
+    content: "\e918";
+  }
+  .fxri-clock:before {
+    content: "\e919";
+  }
+  .fxri-close:before {
+    content: "\e91a";
+  }
+  .fxri-cloud:before {
+    content: "\e91b";
+  }
+  .fxri-code:before {
+    content: "\e91c";
+  }
+  .fxri-contact-form:before {
+    content: "\e91d";
+  }
+  .fxri-credit-card:before {
+    content: "\e91e";
+  }
+  .fxri-cursor-click:before {
+    content: "\e91f";
+  }
+  .fxri-cust-feedback:before {
+    content: "\e920";
+  }
+  .fxri-database:before {
+    content: "\e921";
+  }
+  .fxri-delivery:before {
+    content: "\e922";
+  }
+  .fxri-desktop:before {
+    content: "\e923";
+  }
+  .fxri-devices:before {
+    content: "\e924";
+  }
+  .fxri-down:before {
+    content: "\e925";
+  }
+  .fxri-download:before {
+    content: "\e989";
+  }
+  .fxri-drag-n-drop:before {
+    content: "\e927";
+  }
+  .fxri-drag-n-drop2:before {
+    content: "\e928";
+  }
+  .fxri-edit:before {
+    content: "\e929";
+  }
+  .fxri-edit2:before {
+    content: "\e92a";
+  }
+  .fxri-error:before {
+    content: "\e92b";
+  }
+  .fxri-extension:before {
+    content: "\e92c";
+  }
+  .fxri-features:before {
+    content: "\e92d";
+  }
+  .fxri-file:before {
+    content: "\e92e";
+  }
+  .fxri-flag:before {
+    content: "\e92f";
+  }
+  .fxri-folder:before {
+    content: "\e930";
+  }
+  .fxri-gift:before {
+    content: "\e931";
+  }
+  .fxri-github:before {
+    content: "\e932";
+  }
+  .fxri-globe:before {
+    content: "\e933";
+  }
+  .fxri-globe-2:before {
+    content: "\e934";
+  }
+  .fxri-growing-chart:before {
+    content: "\e935";
+  }
+  .fxri-hearth:before {
+    content: "\e936";
+  }
+  .fxri-help:before {
+    content: "\e937";
+  }
+  .fxri-home:before {
+    content: "\e938";
+  }
+  .fxri-hot-cup:before {
+    content: "\e939";
+  }
+  .fxri-idea:before {
+    content: "\e93a";
+  }
+  .fxri-image-gallery:before {
+    content: "\e93b";
+  }
+  .fxri-image-slider:before {
+    content: "\e93c";
+  }
+  .fxri-info:before {
+    content: "\e93d";
+  }
+  .fxri-italic:before {
+    content: "\e93e";
+  }
+  .fxri-key:before {
+    content: "\e93f";
+  }
+  .fxri-laptop:before {
+    content: "\e940";
+  }
+  .fxri-layers:before {
+    content: "\e941";
+  }
+  .fxri-left-right:before {
+    content: "\e942";
+  }
+  .fxri-left:before {
+    content: "\e943";
+  }
+  .fxri-letter:before {
+    content: "\e944";
+  }
+  .fxri-like:before {
+    content: "\e945";
+  }
+  .fxri-link:before {
+    content: "\e946";
+  }
+  .fxri-lock:before {
+    content: "\e947";
+  }
+  .fxri-login:before {
+    content: "\e948";
+  }
+  .fxri-logout:before {
+    content: "\e949";
+  }
+  .fxri-magic-stick:before {
+    content: "\e94a";
+  }
+  .fxri-map-pin:before {
+    content: "\e94b";
+  }
+  .fxri-menu:before {
+    content: "\e94c";
+  }
+  .fxri-mobile:before {
+    content: "\e94d";
+  }
+  .fxri-mobile2:before {
+    content: "\e94e";
+  }
+  .fxri-foxorg:before {
+    content: "\e94f";
+  }
+  .fxri-more-horizontal:before {
+    content: "\e950";
+  }
+  .fxri-more-vertical:before {
+    content: "\e951";
+  }
+  .fxri-music:before {
+    content: "\e952";
+  }
+  .fxri-new-file:before {
+    content: "\e953";
+  }
+  .fxri-numbered-list:before {
+    content: "\e954";
+  }
+  .fxri-opened-folder:before {
+    content: "\e955";
+  }
+  .fxri-pages:before {
+    content: "\e956";
+  }
+  .fxri-paper-plane:before {
+    content: "\e957";
+  }
+  .fxri-paperclip:before {
+    content: "\e958";
+  }
+  .fxri-photo:before {
+    content: "\e959";
+  }
+  .fxri-photos:before {
+    content: "\e95a";
+  }
+  .fxri-pin:before {
+    content: "\e95b";
+  }
+  .fxri-play:before {
+    content: "\e95c";
+  }
+  .fxri-plus:before {
+    content: "\e95d";
+  }
+  .fxri-preview:before {
+    content: "\e95e";
+  }
+  .fxri-print:before {
+    content: "\e95f";
+  }
+  .fxri-protect:before {
+    content: "\e960";
+  }
+  .fxri-question:before {
+    content: "\e961";
+  }
+  .fxri-quote-left:before {
+    content: "\e962";
+  }
+  .fxri-quote-right:before {
+    content: "\e963";
+  }
+  .fxri-refresh:before {
+    content: "\e964";
+  }
+  .fxri-responsive:before {
+    content: "\e965";
+  }
+  .fxri-right:before {
+    content: "\e966";
+  }
+  .fxri-rocket:before {
+    content: "\e967";
+  }
+  .fxri-sad-face:before {
+    content: "\e968";
+  }
+  .fxri-sale:before {
+    content: "\e969";
+  }
+  .fxri-save:before {
+    content: "\e96a";
+  }
+  .fxri-search:before {
+    content: "\e96b";
+  }
+  .fxri-setting:before {
+    content: "\e96c";
+  }
+  .fxri-setting2:before {
+    content: "\e96d";
+  }
+  .fxri-setting3:before {
+    content: "\e96e";
+  }
+  .fxri-share:before {
+    content: "\e96f";
+  }
+  .fxri-shopping-bag:before {
+    content: "\e970";
+  }
+  .fxri-shopping-basket:before {
+    content: "\e971";
+  }
+  .fxri-shopping-cart:before {
+    content: "\e972";
+  }
+  .fxri-sites:before {
+    content: "\e973";
+  }
+  .fxri-smile-face:before {
+    content: "\e974";
+  }
+  .fxri-speed:before {
+    content: "\e975";
+  }
+  .fxri-star:before {
+    content: "\e976";
+  }
+  .fxri-success:before {
+    content: "\e977";
+  }
+  .fxri-sun:before {
+    content: "\e978";
+  }
+  .fxri-sun2:before {
+    content: "\e979";
+  }
+  .fxri-tablet:before {
+    content: "\e97a";
+  }
+  .fxri-tablet-vertical:before {
+    content: "\e97b";
+  }
+  .fxri-target:before {
+    content: "\e97c";
+  }
+  .fxri-timer:before {
+    content: "\e97d";
+  }
+  .fxri-to-ftp:before {
+    content: "\e97e";
+  }
+  .fxri-to-local-drive:before {
+    content: "\e97f";
+  }
+  .fxri-touch-swipe:before {
+    content: "\e980";
+  }
+  .fxri-touch:before {
+    content: "\e981";
+  }
+  .fxri-trash:before {
+    content: "\e982";
+  }
+  .fxri-underline:before {
+    content: "\e983";
+  }
+  .fxri-unlink:before {
+    content: "\e984";
+  }
+  .fxri-unlock:before {
+    content: "\e985";
+  }
+  .fxri-up-down:before {
+    content: "\e986";
+  }
+  .fxri-up:before {
+    content: "\e987";
+  }
+  .fxri-update:before {
+    content: "\e988";
+  }
+  .fxri-upload:before {
+   content: "\e926"; 
+  }
+  .fxri-user:before {
+    content: "\e98a";
+  }
+  .fxri-user2:before {
+    content: "\e98b";
+  }
+  .fxri-users:before {
+    content: "\e98c";
+  }
+  .fxri-video:before {
+    content: "\e98d";
+  }
+  .fxri-video-play:before {
+    content: "\e98e";
+  }
+  .fxri-watch:before {
+    content: "\e98f";
+  }
+  .fxri-website-theme:before {
+    content: "\e990";
+  }
+  .fxri-wifi:before {
+    content: "\e991";
+  }
+  .fxri-windows:before {
+    content: "\e992";
+  }
+  .fxri-zoom-out:before {
+    content: "\e993";
+  }
+  .fxri-redo:before {
+    content: "\e994";
+  }
+  .fxri-undo:before {
+    content: "\e995";
+  }
