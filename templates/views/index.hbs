@@ -91,19 +91,22 @@
             font-size: 2rem;
         }
         
-        .Nav_SS {
+     .header-profile >.Nav_SS {
             font-size: 2rem;
             position: relative;
             left: 7%;
         }
         
-        .Nav_main>div>button {
-            font-size: 2.4rem;
+        .header-profile>.Nav_SS>button {
+            font-size: 2rem;
+            background-color: transparent;
+            border: none;            cursor: pointer;
+
         }
         
-        .Nav_main>div>span {
+        .header-profile>.Nav_SS>span {
             font-size: 2.5rem;
-            cursor: default;
+            cursor: pointer;
         }
     </style>
     <style>
@@ -301,6 +304,9 @@
             height: 100vh;
             background: white url("/images/Mainpage Images/load.gif") no-repeat center;    z-index: 10001;
         }
+        .notification{
+            top: 3px;
+        }
     </style>
 </head>
 
@@ -314,8 +320,8 @@
         <div class="logo"><img src="/images/Mainpage Images/images/logo.png" alt="FoxORG" srcset="" /></div>
 
         <div class="Nav_SS">
-            <button class="nav_signin">Sign-in</button>
-            <button class="nav_signup">Sign-up</button>
+            {{!-- <button class="nav_signin">Sign-in</button>
+            <button class="nav_signup">Sign-up</button> --}}
         </div>
     </header>
     <!-- ////////////////////////////////////////////////////{Navbar}///////////////////////// -->
