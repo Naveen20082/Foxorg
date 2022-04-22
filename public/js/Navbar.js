@@ -30,6 +30,7 @@ const nav_btn = document.querySelector(".nav_btn");
 nav_btn.addEventListener("click", () => {
   nav_gap();
   arr_hide();
+  console.log("clicked");
   arrange.style = "animation-duration: 1s;";
 });
 

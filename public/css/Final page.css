@@ -154,19 +154,6 @@
     justify-content: center;
 }
 
-.menu {
-    position: fixed;
-    margin: 2vw;
-    right: 1px;
-    width: 3vw;
-    height: 3vw;
-    /* background: linear-gradient( -64deg, black, transparent); */
-    margin-top: 5vw;
-    margin-right: 5vw;
-    /* border: 2px dashed blue; */
-    z-index: 101;
-}
-
 .menu2 {
     position: fixed;
     margin: 2vw;
