@@ -741,7 +741,7 @@ body {
     border-radius: 50%;
     border: none;
     background: transparent;
-    background: url("../Images/Mainpage Images/SVG/mute.svg");
+    background: url("../images/Mainpage Images/SVG/mute.svg");
     cursor: pointer;
     transition: all 0.5s;
 }

@@ -46,11 +46,11 @@ mute.addEventListener("click", () => {
 
   if (vid.muted == true) {
     vid.muted = false;
-    mute.style.background = "url('./Images/Mainpage Images/images/volume.png') no-repeat center center/cover";
+    mute.style.background = "url('../images/Mainpage Images/images/volume.png') no-repeat center center/cover";
     mute.title = "Mute ";
   } else {
     vid.muted = true;
-    mute.style.background = "url('./Images/Mainpage Images/SVG/mute.svg') no-repeat center center/cover";
+    mute.style.background = "url('../images/Mainpage Images/SVG/mute.svg') no-repeat center center/cover";
     mute.title = " UnMute";
   }
 });
