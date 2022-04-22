@@ -1013,32 +1013,33 @@ body.light-mode:before {
 
 @keyframes slide_top {
     0% {
-        transform: scale(0.9);
+        transform: scale(0.9) translateY(0vh);
         opacity: 0.5;
-        top: 100%;
+        /* top: 100%; */
     }
     100% {
-        top: 0%;
+        /* top: 0%; */
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(-100vh);
     }
 }
 
 .app_hide {
+    position: fixed;
     animation-name: slide_bottom;
     animation-fill-mode: forwards;
 }
 
 @keyframes slide_bottom {
     0% {
-        top: 0%;
+        /* top: 0%; */
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(-100vh);
     }
     100% {
-        transform: scale(0.9);
+        transform: scale(0.9) translateY(0vh);
         opacity: 0.5;
-        top: 100%;
+        /* top: 100%; */
     }
 }
 
@@ -1065,10 +1066,12 @@ body.light-mode:before {
     cursor: pointer;
     background: transparent;
     padding: 0%;
+    user-select: none;
 }
 
 .nav_btn>img {
     width: 2rem;
+    user-select: none;
 }
 
 .nav_btn_rotate {

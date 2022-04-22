@@ -7,9 +7,11 @@ const arrange_hide = document.querySelector(".arrange_hide");
 
 const arr_hide = () => {
   if (!arrange.classList.contains("app_show")) {
-    arrange.classList.toggle("app_show");
+    arrange.classList.add("app_show");
+    arrange.classList.remove("app_hide");
   } else {
-    arrange.classList.toggle("app_hide");
+    arrange.classList.add("app_hide");
+    arrange.classList.remove("app_show");
   }
 };
 
@@ -30,7 +32,6 @@ const nav_btn = document.querySelector(".nav_btn");
 nav_btn.addEventListener("click", () => {
   nav_gap();
   arr_hide();
-  console.log("clicked");
   arrange.style = "animation-duration: 1s;";
 });
 
@@ -52,9 +53,3 @@ arrange_hide.addEventListener("click", () => {
   nav_gap();
   arr_hide();
 });
-
-const nav_signin = document.querySelector(".nav_signin");
-const nav_signup = document.querySelector(".nav_signup");
-
-nav_signin.addEventListener(".click", () => {});
-nav_signup.addEventListener(".click", () => {});
