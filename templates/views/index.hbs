@@ -314,8 +314,9 @@
     {{!-- <div class="canvas">
         <canvas id='world'></canvas>
     </div> --}}
-    {{!-- <div class="loader">
-    </div> --}}
+    <div class="loader">
+        <button class="ldbtn">hello</button>
+    </div>
     <header class="Nav_main">
         <div class="logo"><img src="/images/Mainpage Images/images/logo.png" alt="FoxORG" srcset="" /></div>
 
@@ -450,7 +451,6 @@
     </section>
     <script src="./js/Mainpage.js"></script>
     <!-- //////////////same js files//////////////////// -->
-    <script src="./js/jquery_min.js"></script>
     <script src="./js/SI_SU.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/Navbar.js"></script>
@@ -467,6 +467,11 @@
             console.log(e.pageX);
         });
         
+        document.addEventListener('DOMContentLoaded', function() {
+            const  loader = document.querySelector(".loader")
+            loader.style.display = "none";
+        }, false);
+       
     </script>
 </body>
 </html>
