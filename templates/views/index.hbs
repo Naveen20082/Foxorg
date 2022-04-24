@@ -481,8 +481,11 @@
         });
         
         document.addEventListener('DOMContentLoaded', function() {
-            const  loader = document.querySelector(".loader")
-            loader.style.display = "none";
+            const  loader = document.querySelector(".loader");
+            setTimeout(()=>{
+                            loader.style.display = "none";
+
+            }, 5000)
         }, false);
 
        
