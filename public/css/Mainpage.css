@@ -96,7 +96,9 @@ border-radius: 5rem;
     text-align: center;
     align-self: center;
     width: -webkit-fill-available;
-    /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pg2_box {
@@ -557,7 +559,7 @@ opacity: 0.5;
 
 .about>p {
     font-family: "Montserrat Alternates";
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .content {
@@ -587,21 +589,19 @@ opacity: 0.5;
 
 .add>p {
     font-family: "Montserrat Alternates";
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .ico {
     background-color: black;
     width: 100%;
     height: 40%;
-    /* border-bottom-left-radius: 1rem; */
-    /* border-bottom-right-radius: 1rem; */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: -6rem;
     justify-content: center;
+    padding: 3%;
 }
 
 .footer {
@@ -634,7 +634,7 @@ opacity: 0.5;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .img {
