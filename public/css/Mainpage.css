@@ -21,11 +21,11 @@ html {
     position: relative;
     width: 117rem;
     height: 100%;
-    margin-left: 25rem;
+    margin-left: 12rem;
     transition: all 0.5s ease-out;
     border-radius: 3rem;
     animation: vido 2s;
-    transform: perspective(16px) rotateY(1deg) scale(0.5);
+    transform: perspective(14px) rotateY(1deg) scale(0.5);
     transform-origin: right;
     -webkit-box-reflect: below 0px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
@@ -515,7 +515,7 @@ opacity: 0.5;
 
 .ba {
     /* width: 100vw; */
-    height: 100%;
+    height: 100vh;
     background-color: white;
     /* border: 2px dashed aliceblue; */
     scroll-snap-align: start;
@@ -524,7 +524,7 @@ opacity: 0.5;
 
 .pg-3 {
     width: 96%;
-    height: 90%;
+    min-height: 90%;
     background-color: white;
     box-shadow: 0px 0px 1px 2px;
     /* padding: 1vw; */
@@ -535,6 +535,9 @@ opacity: 0.5;
     margin-bottom: 4vw;
     top: 5rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .about {
