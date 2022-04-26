@@ -1,43 +1,33 @@
 // ///////////////////////////////////////////////////
 
 const headingFade = document.querySelectorAll(".fade-in");
-const imgfade = document.querySelectorAll(".fade-lf");
-const linefade = document.querySelector(".fade-out");
-
-const vanish1 = document.querySelectorAll(".vanish1");
-const vanish2 = document.querySelectorAll(".vanish2");
-
-const Dmag_img = document.querySelector("#Dmag_img");
 const Dmag_heading = document.querySelector("#Dmag_heading");
-const pg2_line = document.querySelectorAll(".pg2_line");
 
-const appear_options = {
-  threshold: [0, 0.25, 0.5, 0.75, 1],
-  rootMargin: "0px 0px -200px 0px",
-};
-const appearonscroll = new IntersectionObserver(function (entries, appearonscroll) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      Dmag_heading.classList.add("appear");
-      Dmag_heading.classList.remove("vanish1");
-      Dmag_img.classList.add("appearr");
-      Dmag_img.classList.remove("vanish2");
-      // console.log("dfd");
-      appearonscroll.unobserve(entry.target);
+document.addEventListener("DOMContentLoaded", (event) => {
+  const dmgbook = document.querySelector(".dmgbook");
+  const dmgpen = document.querySelector(".dmgpen");
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          dmgpen.classList.add("pen_appear");
+          dmgbook.classList.add("book_appear");
+          Dmag_heading.classList.add("appear");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: [0.5],
     }
-  });
-}, appear_options);
+  );
 
-headingFade.forEach((fader) => {
-  appearonscroll.observe(fader);
+  observer.observe(document.querySelector(".pg2"));
+  observer.observe(headingFade);
 });
-
-imgfade.forEach((fader) => {
-  appearonscroll.observe(fader);
-});
-
 //////////////////////////////////button ////////////////
 const mute = document.querySelector(".mute");
 
@@ -54,3 +44,31 @@ mute.addEventListener("click", () => {
     mute.title = " UnMute";
   }
 });
+
+///
+// const appear_options = {
+//   threshold: [0, 0.25, 0.5, 0.75, 1],
+//   rootMargin: "0px 0px -200px 0px",
+// };
+// const appearonscroll = new IntersectionObserver(function (entries, appearonscroll) {
+//   entries.forEach((entry) => {
+//     if (!entry.isIntersecting) {
+//       return;
+//     } else {
+//       Dmag_heading.classList.add("appear");
+//       Dmag_heading.classList.remove("vanish1");
+//       Dmag_img.classList.add("appearr");
+//       Dmag_img.classList.remove("vanish2");
+//       // console.log("dfd");
+//       appearonscroll.unobserve(entry.target);
+//     }
+//   });
+// }, appear_options);
+
+// headingFade.forEach((fader) => {
+//   appearonscroll.observe(fader);
+// });
+
+// imgfade.forEach((fader) => {
+//   appearonscroll.observe(fader);
+// });
