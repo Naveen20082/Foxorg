@@ -396,11 +396,12 @@ body.light-mode:before {
     flex-shrink: 0;
 }
 
-@media screen and (max-width: 945px) {
+
+/* @media screen and (max-width: 945px) {
     .left-side {
         display: none;
     }
-}
+} */
 
 .side-wrapper+.side-wrapper {
     margin-top: 20px;
@@ -1081,7 +1082,7 @@ body.light-mode:before {
 }
 
 .nav_btn>img {
-    width: 2rem;
+    width: 25px;
     user-select: none;
 }
 

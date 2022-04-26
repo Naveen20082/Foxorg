@@ -366,19 +366,15 @@ border-radius: 5rem;
 }
 
 @keyframes book_zoom {
-    /*    0% {
-    opacity: 0;
-    transform: translateY(-5rem) translateY(5rem) rotate(90deg) scale(1.5);
-}
-70% {
-    opacity: 1;
-    transform: translateY(0rem) translateY(0rem) rotate(-10deg) scale(0.8);
-}
-100% {
-    transform: rotate(0deg) scale(1.1);
-    opacity: 1;
-}*/
     0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    /* 0% {
         opacity: 0;
         transform: translateY(-5rem) translateY(5rem) rotate(90deg) scale(1.5);
     }
@@ -389,14 +385,14 @@ border-radius: 5rem;
     100% {
         transform: rotate(0deg) scale(1.1);
         opacity: 1;
-    }
+    } */
 }
 
 .pen_appear {
     animation-name: pen;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes pen {
