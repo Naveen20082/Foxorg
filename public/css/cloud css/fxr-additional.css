@@ -17057,7 +17057,7 @@ body {
   bottom: 4rem;
   left: 50%;
   transform: translate(-50%) scale(2, 1.2);
-  animation: wave 5s ease-in-out infinite;
+  /* animation: wave 5s ease-in-out infinite; */
 }
 @keyframes line {
   from {
