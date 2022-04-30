@@ -399,7 +399,7 @@ body.light-mode:before {
 
 /* @media screen and (max-width: 945px) {
     .left-side {
-        display: none;
+        /* display: none; */
     }
 } */
 
