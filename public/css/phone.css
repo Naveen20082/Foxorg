@@ -1,0 +1,96 @@
+        @media (max-width: 500px) {
+            body {
+                padding: 0%;
+            }
+            .home {
+                padding: 1rem;
+            }
+            /* PAge 1 */
+            .Nav_main>.logo>img {
+                width: 10rem;
+            }
+            .bod {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            .vid {
+                width: 100%;
+                margin: 0 !important;
+                transform: none !important;
+            }
+            .pg1_box>h1 {
+                font-size: 4rem;
+            }
+            .vision {
+                font-size: 2rem;
+            }
+            .mute_btn>.mute {
+                top: -10%;
+                right: 0%;
+            }
+            .nav_btn {
+                margin: 8rem;
+                margin-right: 4rem;
+            }
+            .nav_btn>img {
+                width: 17px;
+            }
+            /* 2nd page */
+            .pg2 {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                max-height: fit-content;
+            }
+            .contentpg2 {
+                left: 0%;
+                width: 100%;
+            }
+            .heading {
+                font-size: 4rem;
+            }
+            .moto>p {
+                font-size: 1.7rem;
+            }
+            .dmag_img_container {
+                width: 35rem;
+                height: 28rem;
+            }
+            .dmag_img_container>img:nth-child(4) {
+                right: -4%
+            }
+            .dmag_img_container>img:nth-child(3) {
+                right: 9%;
+            }
+            .dmag_img_container>img:nth-child(2) {
+                left: 0%;
+            }
+            .dmag_img_container>img:nth-child(1) {
+                top: 0%;
+                left: 0%;
+            }
+            /* 3rd page */
+            .about>p,
+            .add>p {
+                font-size: 1.5rem;
+            }
+            .icons {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5em;
+                padding: 2rem;
+                font-size: 1rem;
+            }
+            .footer {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .footer>img {
+                width: 100%;
+            }
+            .text-color>a {
+                font-size: 1.5rem;
+            }
+        }
