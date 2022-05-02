@@ -1117,12 +1117,13 @@ body.light-mode:before {
     transition: height 2s ease 0s;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 .nav_ser>a,
 .nav_ser>ul>li {
     cursor: pointer;
-    color: white;
+    color: white !important;
     list-style: none;
     transition: all 0.5s;
     width: 100%;
@@ -1144,6 +1145,13 @@ body.light-mode:before {
     height: 100vh;
     position: absolute;
     z-index: -20;
+}
+
+.nav_signin,
+.nav_signup {
+    background: transparent;
+    border: none;
+    font-size: 18px;
 }
 
 
