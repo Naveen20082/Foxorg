@@ -127,9 +127,9 @@
   .fox-fxg-database:before {
     content: "\e921";
   }
-  .fox-fxg-delivery:before {
+  /* .fox-fxg-delivery:before {
     content: "\e922";
-  }
+  } */
   .fox-fxg-desktop:before {
     content: "\e923";
   }
@@ -346,9 +346,9 @@
   .fox-fxg-responsive:before {
     content: "\e96a";
   }
-  .fox-fxg-right:before {
+  /* .fox-fxg-right:before {
     content: "\e96b";
-  }
+  } */
   .fox-fxg-rocket:before {
     content: "\e96c";
   }
@@ -370,9 +370,9 @@
   .fox-fxg-setting-3:before {
     content: "\ea99";
   }
-  .fox-fxg-setting:before {
+  /* .fox-fxg-setting:before {
     content: "\ea9a";
-  }
+  } */
   .fox-fxg-share:before {
     content: "\e974";
   }

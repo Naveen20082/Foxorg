@@ -233,9 +233,9 @@
 /* .socicon-twitter:before {
   content: "\e040";
 } */
-.socicon-facebook:before {
+/* .socicon-facebook:before {
   content: "\e041";
-}
+} */
 .socicon-googleplus:before {
   content: "\e042";
 }
@@ -281,9 +281,9 @@
 .socicon-lastfm:before {
   content: "\e050";
 }
-.socicon-youtube:before {
+/* .socicon-youtube:before {
   content: "\e051";
-}
+} */
 /* .socicon-vimeo:before {
   content: "\e052";
 } */
