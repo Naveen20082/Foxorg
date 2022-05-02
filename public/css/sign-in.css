@@ -66,7 +66,7 @@
     width: 18rem;
     border-radius: 10px;
     height: 2rem;
-    font-size: 100%;
+    /* font-size: 100%; */
 }
 
 .sip-submit {
@@ -86,8 +86,6 @@
     cursor: pointer;
     width: 5rem;
     height: 5rem;
-    width: 8rem;
-    height: 8rem;
     /* background: black; */
     border: none;
     border-radius: 50%;
