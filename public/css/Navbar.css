@@ -399,7 +399,7 @@ body.light-mode:before {
 
 /* @media screen and (max-width: 945px) {
     .left-side {
-        /* display: none; */
+        display: none;
     }
 } */
 
@@ -739,7 +739,7 @@ body.light-mode:before {
     background: #1e59f1;
 }
 
-.menu {
+.nav_menu {
     width: 5px;
     height: 5px;
     background-color: var(--button-inactive);
@@ -749,7 +749,7 @@ body.light-mode:before {
 }
 
 @media screen and (max-width: 415px) {
-    .adobe-product .menu {
+    .adobe-product .nav_menu {
         display: none;
     }
 }
