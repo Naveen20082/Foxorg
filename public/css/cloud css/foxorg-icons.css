@@ -48,9 +48,9 @@
   .fxri-apple:before {
     content: "\e907";
   }
-  .fxri-arrow-down:before {
+  /* .fxri-arrow-down:before {
     content: "\e908";
-  }
+  } */
   .fxri-arrow-next:before {
     content: "\e909";
   }
@@ -132,9 +132,9 @@
   .fxri-desktop:before {
     content: "\e923";
   }
-  .fxri-devices:before {
+  /* .fxri-devices:before {
     content: "\e924";
-  }
+  } */
   .fxri-down:before {
     content: "\e925";
   }
@@ -180,9 +180,9 @@
   .fxri-globe:before {
     content: "\e933";
   }
-  .fxri-globe-2:before {
+  /* .fxri-globe-2:before {
     content: "\e934";
-  }
+  } */
   .fxri-growing-chart:before {
     content: "\e935";
   }
@@ -225,9 +225,9 @@
   .fxri-left-right:before {
     content: "\e942";
   }
-  .fxri-left:before {
+  /* .fxri-left:before {
     content: "\e943";
-  }
+  } */
   .fxri-letter:before {
     content: "\e944";
   }
@@ -330,9 +330,9 @@
   .fxri-responsive:before {
     content: "\e965";
   }
-  .fxri-right:before {
+  /* .fxri-right:before {
     content: "\e966";
-  }
+  } */
   .fxri-rocket:before {
     content: "\e967";
   }
@@ -348,9 +348,9 @@
   .fxri-search:before {
     content: "\e96b";
   }
-  .fxri-setting:before {
+  /* .fxri-setting:before {
     content: "\e96c";
-  }
+  } */
   .fxri-setting2:before {
     content: "\e96d";
   }

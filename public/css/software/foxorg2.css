@@ -94,9 +94,9 @@
   .fox-fxg-cash:before {
     content: "\e916";
   }
-  .fox-fxg-change-style:before {
+  /* .fox-fxg-change-style:before {
     content: "\e917";
-  }
+  } */
   .fox-fxg-chat:before {
     content: "\e918";
   }
@@ -427,9 +427,9 @@
   .fox-fxg-touch-swipe:before {
     content: "\e985";
   }
-  .fox-fxg-touch:before {
+  /* .fox-fxg-touch:before {
     content: "\e986";
-  }
+  } */
   .fox-fxg-trash:before {
     content: "\e987";
   }
@@ -466,9 +466,9 @@
   .fox-fxg-user:before {
     content: "\e992";
   }
-  .fox-fxg-users:before {
+  /* .fox-fxg-users:before {
     content: "\e993";
-  }
+  } */
   .fox-fxg-video-play:before {
     content: "\e994";
   }

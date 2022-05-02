@@ -155,9 +155,9 @@
 .socicon-envato:before {
   content: "\e026";
 }
-.socicon-behance:before {
+/* .socicon-behance:before {
   content: "\e027";
-}
+} */
 .socicon-delicious:before {
   content: "\e028";
 }
@@ -230,9 +230,9 @@
 .socicon-snapchat:before {
   content: "\e03f";
 }
-.socicon-twitter:before {
+/* .socicon-twitter:before {
   content: "\e040";
-}
+} */
 .socicon-facebook:before {
   content: "\e041";
 }
@@ -284,9 +284,9 @@
 .socicon-youtube:before {
   content: "\e051";
 }
-.socicon-vimeo:before {
+/* .socicon-vimeo:before {
   content: "\e052";
-}
+} */
 .socicon-dailymotion:before {
   content: "\e053";
 }
@@ -425,9 +425,9 @@
 .socicon-formulr:before {
   content: "\e082";
 }
-.socicon-instagram:before {
+/* .socicon-instagram:before {
   content: "\e057";
-}
+} */
 .socicon-battlenet:before {
   content: "\e083";
 }

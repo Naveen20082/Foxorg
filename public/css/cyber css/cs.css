@@ -130,9 +130,9 @@
   .mobi-mbri-delivery:before {
     content: "\e922";
   }
-  .mobi-mbri-desktop:before {
+  /* .mobi-mbri-desktop:before {
     content: "\e923";
-  }
+  } */
   .mobi-mbri-devices:before {
     content: "\e924";
   }
@@ -181,9 +181,9 @@
   .mobi-mbri-github:before {
     content: "\e933";
   }
-  .mobi-mbri-globe-2:before {
+  /* .mobi-mbri-globe-2:before {
     content: "\e934";
-  }
+  } */
   .mobi-mbri-globe:before {
     content: "\e935";
   }
@@ -253,9 +253,9 @@
   .mobi-mbri-magic-stick:before {
     content: "\e94b";
   }
-  .mobi-mbri-map-pin:before {
+  /* .mobi-mbri-map-pin:before {
     content: "\e94c";
-  }
+  } */
   .mobi-mbri-menu:before {
     content: "\e94d";
   }
@@ -322,15 +322,15 @@
   .mobi-mbri-print:before {
     content: "\e962";
   }
-  .mobi-mbri-protect:before {
+  /* .mobi-mbri-protect:before {
     content: "\e963";
-  }
+  } */
   .mobi-mbri-question:before {
     content: "\e964";
   }
-  .mobi-mbri-quote-left:before {
+  /* .mobi-mbri-quote-left:before {
     content: "\e965";
-  }
+  } */
   .mobi-mbri-quote-right:before {
     content: "\e966";
   }
@@ -370,9 +370,9 @@
   .mobi-mbri-setting-3:before {
     content: "\e972";
   }
-  .mobi-mbri-setting:before {
+  /* .mobi-mbri-setting:before {
     content: "\e973";
-  }
+  } */
   .mobi-mbri-share:before {
     content: "\e974";
   }
@@ -466,18 +466,18 @@
   .mobi-mbri-user:before {
     content: "\e992";
   }
-  .mobi-mbri-users:before {
+  /* .mobi-mbri-users:before {
     content: "\e993";
-  }
+  } */
   .mobi-mbri-video-play:before {
     content: "\e994";
   }
   .mobi-mbri-video:before {
     content: "\e995";
   }
-  .mobi-mbri-watch:before {
+  /* .mobi-mbri-watch:before {
     content: "\e996";
-  }
+  } */
   .mobi-mbri-website-theme-2:before {
     content: "\e997";
   }

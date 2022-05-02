@@ -16430,16 +16430,16 @@ body {
 .cid-rlqHi7Op8x .fxr-iconfont {
   font-family: 'Moririse2' !important;
 }
-.cid-rlqHi7Op8x .fxri-right:before {
+/* .cid-rlqHi7Op8x .fxri-right:before {
   content: "\e909";
   font-weight: 900;
   padding-left: 4px;
-}
-.cid-rlqHi7Op8x .fxri-left:before {
+} */
+/* .cid-rlqHi7Op8x .fxri-left:before {
   content: "\e90a";
   font-weight: 900;
   padding-right: 4px;
-}
+} */
 .cid-rlqHi7Op8x .carousel-control,
 .cid-rlqHi7Op8x .carousel-indicators li {
   background-color: #ff8a73 !important;
