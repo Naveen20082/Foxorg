@@ -8,7 +8,7 @@
 
 .SP_main {
     position: fixed;
-    display: none;
+    /* display: none; */
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -19,9 +19,9 @@
 }
 
 .SP_main-cont {
-    width: 66rem;
+    width: 26vw;
     /* border: 2px solid; */
-    height: 88rem;
+    height: 82vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -32,13 +32,15 @@
     position: fixed;
     background-color: rgba(255, 255, 255, 0.6);
     overflow: hidden;
+    top: 6%;
+    left: 37%;
 }
 
 .SP_main-cont h1 {
     cursor: default;
     position: relative;
-    top: 23%;
-    font-size: 4rem;
+    top: 24%;
+    font-size: 29px;
 }
 
 .SP_main-form {
@@ -47,7 +49,7 @@
     z-index: 10;
     flex-direction: column;
     justify-content: space-around;
-    height: 47rem;
+    height: 400px;
     width: 100%;
     align-items: center;
 }
@@ -55,7 +57,7 @@
 .SP_main-input {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 11px;
 }
 
 .SP_main-input>input {
@@ -63,10 +65,9 @@
     border: none;
     border-bottom: 2px solid rgb(206, 204, 204);
     outline-style: none;
-    width: 37rem;
+    width: 18rem;
     border-radius: 10px;
-    height: 4rem;
-    font-size: 2rem;
+    height: 2rem;
 }
 
 .SP_main-submit {
@@ -79,12 +80,13 @@
 .SP_main-submit h1 {
     cursor: default;
     top: 0;
+    color: white;
 }
 
 .SP_main-submit>button {
     cursor: pointer;
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
     /* background: black; */
     border: none;
     border-radius: 50%;
@@ -111,23 +113,23 @@
     text-decoration: underline;
     cursor: pointer;
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .SP_main_cancel {
-    width: 2rem;
+    width: 8%;
     /* height: 5rem; */
     object-fit: contain;
     position: absolute;
     top: 0%;
     right: 0%;
-    margin-right: 8rem;
-    margin-top: 4rem;
+    margin-right: 7%;
+    margin-top: 6%;
     z-index: 10;
 }
 
 .SP_main_cancel>img {
-    width: 6rem;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -140,7 +142,7 @@
     cursor: pointer;
     text-decoration: underline;
     color: white;
-    /* font-size: 2.5rem; */
+    font-size: 1.5rem;
 }
 
 
@@ -174,7 +176,7 @@
     position: absolute;
     top: 80%;
     left: 26%;
-    width: 3000px;
+    width: 3500px;
     height: 3000px;
     background: black;
     margin-left: -89rem;

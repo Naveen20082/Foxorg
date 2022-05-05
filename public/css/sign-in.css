@@ -8,7 +8,7 @@
 
 .sip {
     position: fixed;
-    display: none;
+    /* display: none; */
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -32,6 +32,8 @@
     position: fixed;
     background-color: rgba(244, 244, 244, 0.6);
     overflow: hidden;
+    top: 6%;
+    left: 37%;
 }
 
 .sip-cont h1 {
@@ -128,7 +130,7 @@
 }
 
 .cancel>img {
-    width: 6rem;
+    width: 6em;
     cursor: pointer;
 }
 
@@ -163,10 +165,10 @@
     position: absolute;
     top: 74%;
     left: 26%;
-    width: 4127px;
+    width: 3500px;
     height: 3000px;
     background: black;
-    margin-left: -141rem;
+    /* margin-left: -141rem; */
     transform-origin: 50% 48%;
     border-radius: 46%;
     animation: wave 12s infinite linear;
