@@ -19,9 +19,9 @@
 }
 
 .SP_main-cont {
-    width: 26vw;
+    width: 48vw;
     /* border: 2px solid; */
-    height: 82vh;
+    height: 78vh;
     display: flex;
     flex-direction: column;
     align-content: center;

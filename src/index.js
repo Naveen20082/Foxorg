@@ -1,15 +1,15 @@
-// require('dotenv').config();
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const app = express();
 const hbs = require("hbs");
-// const bcrypt = require("bcryptjs");
-// const cookieparser = require("cookie-parser");
-// const auth = require("./middleware/auth")
+const bcrypt = require("bcryptjs");
+const cookieparser = require("cookie-parser");
+const auth = require("./middleware/auth")
 
-// require("./db/connection");
-// const Rohit = require("./models/registration");
-// const { json } = require("express");
+require("./db/connection");
+const Rohit = require("./models/registration");
+const { json } = require("express");
 
 const port = process.env.PORT || 8000;
 
@@ -17,9 +17,9 @@ const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
-// app.use(express.json());
-// app.use(cookieparser());
-// app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+app.use(cookieparser());
+app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(static_path));
 app.set("view engine", "hbs");
@@ -62,10 +62,11 @@ app.get("/software", (req, res) => {
   res.render("software");
 });
 
-app.get("/sign_in", (req, res) => {
+app.get("/login", (req, res) => {
   res.render("sign_in");
 });
-app.get("/sign_up", (req, res) => {
+
+app.get("/registration", (req, res) => {
   res.render("sign_up");
 });
 
@@ -74,82 +75,85 @@ app.get("/sign_up", (req, res) => {
 //     res.render("list");
 // });
 
-// app.get("/logout", auth , async(req , res) =>{
-//     try {
-//         req.client.tokens = req.client.tokens.filter((currelement) =>{
-//             return currelement.tokens != req.cToken ;
-//         })
+app.get("/logout", auth , async(req , res) =>{
+    try {
+        req.client.tokens = req.client.tokens.filter((currelement) =>{
+            return currelement.tokens != req.cToken ;
+        });
 
-//         res.clearCookie("user");
-//         console.log("successful logout");
+        res.clearCookie("user");
+        console.log("successful logout");
 
-//         await req.client.save();
-//         res.render("login");
-//     } catch (error) {
-//         res.status(500).send(error);
-//     }
-// })
+        await req.client.save();
+        res.render("Sign_in");
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
 
-// app.post("/signup", async (req, res)=>{
-//     const { myname, myemail, mypassword, mycpassword} = req.body;
+app.post("/registration", async (req, res)=>{
+    const { Name, Email, Password, Confirm_Password} = req.body;
 
-//     // if (!myname || !myemail || !mypassword || !mycpassword){
-//     //     return res.status(422).render("signup",{error: "please fill all field"});
-//     // }
-//     try{
-//         const existUser = await Rohit.findOne({myemail : myemail});
-//         if(existUser){
-//             return res.status(422).render("signup", {error : "email already exist"});
-//         }else if(mypassword != mycpassword){
-//             return res.status(422).render("signup",{error: "password are not matched"});
-//         }else{
-//                const registeruserdata = new Rohit({ myname, myemail, mypassword, mycpassword});
+    if (!Name || !Email || !Password || !Confirm_Password){
+        return res.status(422).render("sign_up",{error: "please fill all field"});
+    }
+    try{
+        const existUser = await Rohit.findOne({Email : Email});
+        if(existUser){
+            return res.status(422).render("sign_up", {error : "email already exist"});
+        }else if(Password != Confirm_Password){
+          console.log("hello")
+            return res.status(422).render("sign_up",{error: "password are not matched"});
+        }else{
+              
+               const registeruserdata = new Rohit({ Name, Email, Password, Confirm_Password});
+                console.log(registeruserdata);
+                const token = await registeruserdata.produceAuthToken();
 
-//                 const token = await registeruserdata.produceAuthToken();
+            res.cookie("user", token, {
+                expires:new Date(Date.now() + 30000000),
+                httpOnly:true
+            });
 
-//             res.cookie("user", token, {
-//                 expires:new Date(Date.now() + 100000),
-//                 httpOnly:true
-//             });
-
-//             const registered = await registeruserdata.save();
-//             res.status(201).render( "index" , {display : registered} );
-//           }
-//          }
-//     catch(error){
-//         console.log(error)
-//         res.status(400).send(error);
-//     }
-// });
+            const registered = await registeruserdata.save();
+            console.log(registered);
+            res.status(201).render( "index" , {display : registered} );
+          }
+         }
+    catch(error){
+        console.log(error)
+        res.status(400).send(error);
+    }
+});
 
 // // login validation
-// app.post("/login", async(req, res)=>{
-//     try {
-//         const myemail = req.body.myemail;
-//         const mypassword = req.body.mypassword;
+app.post("/login", async(req, res)=>{
+    try {
+        const Email = req.body.Email;
+        const Password = req.body.Password;
 
-//         const useremail = await Rohit.findOne({myemail});
+        const useremail = await Rohit.findOne({Email});
 
-//         const token = await useremail.produceAuthToken();
+        const token = await useremail.produceAuthToken();
 
-//         res.cookie("user", token, {
-//             expires:new Date(Date.now() + 100000),
-//             httpOnly:true,
-//             // secure:true
-//         });
+        res.cookie("user", token, {
+            expires:new Date(Date.now() + 100000),
+            httpOnly:true,
+            // secure:true 
+        });
 
-//         const isMatch = await bcrypt.compare(mypassword, useremail.mypassword);
+        const isMatch = await bcrypt.compare(Password, useremail.Password);
 
-//         if(isMatch){
-//             res.status(201).render("index");
-//         } else{
-//             res.send("data is not correct");
-//         }
+        if(isMatch){
+            res.status(201).render("index");
+        } else{
+            res.send("data is not correct");
+        }
 
-//     } catch (error) {
-//         res.status(400).send("invalid E-mail")
-//     }
-// })
+    } catch (error) {
+        res.status(400).send("invalid E-mail")
+    }
+})
 app.listen(port, () => {
   console.log(`server is running at ${port}`);
 });
